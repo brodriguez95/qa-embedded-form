@@ -1,27 +1,30 @@
-<!--BEGIN RALLYBOUND CODE -->
-<iframe src="https://fundraise1.rallybound.dev/WidgetApi/AuthenticationState?frameOrigin=https://brodriguez95.github.io/">
-</iframe>
-<script type="text/javascript>
- console.log('In parent script');
-  if (window.addEventListener) {
-	console.log('Adding event listener');
-    window.addEventListener("message", handleMessage);
-  }
+<html>
+	<body>
+		<iframe src="https://fundraise1.rallybound.dev/WidgetApi/AuthenticationState?frameOrigin=https://brodriguez95.github.io/">
+		</iframe>
+	</body>
 
-  function handleMessage(event) {
+	<script type="text/javascript>
+		console.log('In parent script');
+		if (window.addEventListener) {
+			console.log('Adding event listener');
+			window.addEventListener("message", handleMessage);
+		}
+		
+		function handleMessage(event) {
 			console.log("Received a message from " + event.origin + ".");
-
+	
 			// If the window that sent this message is not http://dev.iframe.com, then
 			// that message needs to be thrown out.
 			if (event.origin != "https://fundraise1.rallybound.dev") {
 				console.log("Skipping message.");
 				return;
 			}
-  
+	
 			var dataFromChildIframe = event.data;
-
+	
 			// Log the data to the console.
 			console.log(dataFromChildIframe);
-  }
-</script>
-<!--END RALLYBOUND CODE -->
+		}
+	</script>
+</html>
