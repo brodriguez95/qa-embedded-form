@@ -2,7 +2,9 @@
 <iframe src="https://fundraise1.rallybound.dev/WidgetApi/AuthenticationState?frameOrigin=https://brodriguez95.github.io/">
 </iframe>
 <script type="text/javascript>
+ console.log('In parent script');
   if (window.addEventListener) {
+	console.log('Adding event listener');
     window.addEventListener("message", handleMessage);
   }
 
