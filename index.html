@@ -8,12 +8,8 @@
 		}
 		
 		function handleMessage(event) {
-			console.log("Received a message from " + event.origin + ".");
 	
-			if (event.origin != "https://fundraise1.rallybound.dev") {
-				console.log("Skipping message.");
-				return;
-			}
+			if (event.origin != "https://fundraise1.rallybound.dev") return;
 	
 			var dataFromChildIframe = event.data;
 	
