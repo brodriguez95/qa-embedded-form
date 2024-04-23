@@ -1,27 +1,18 @@
 <html>
 	<head>
-	<link rel="stylesheet" type="text/css" href="https://recurring.qa.dev-rb.com/Content/Global/css/rallybound-icon-fonts.css">
 	<script type="text/javascript">
-		console.log('In parent script');
 		if (window.addEventListener) {
-			console.log('Adding event listener');
 			window.addEventListener("message", handleMessage);
 		}
 		
 		function handleMessage(event) {
-	
-			if (event.origin != "https://fundraise1.rallybound.dev") return;
-	
+			if (event.origin != "https://recurring.qa.dev-rb.com") return;
 			var dataFromChildIframe = event.data;
-	
-			// Log the data to the console.
 			console.log(dataFromChildIframe);
 		}
 	</script>
 	</head>
 	<body>
-		<button class="icon-grid"/>
-		<iframe src="https://fundraise1.rallybound.dev/WidgetApi/UserAccountInfo?frameOrigin=https://brodriguez95.github.io">
-		</iframe>
+		<iframe src="https://recurring.qa.dev-rb.com/WidgetApi/UserAccountInfo?frameOrigin=https://brodriguez95.github.io"></iframe>
 	</body>
 </html>
