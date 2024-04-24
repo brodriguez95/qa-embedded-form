@@ -6,13 +6,13 @@
 		}
 		
 		function handleMessage(event) {
-			if (event.origin != "https://recurring.qa.dev-rb.com") return;
+			if (event.origin != "https://platform934.qa.dev-rb.com") return;
 			var dataFromChildIframe = event.data;
 			console.log(dataFromChildIframe);
 		}
 	</script>
 	</head>
 	<body>
-		<iframe src="https://recurring.qa.dev-rb.com/WidgetApi/UserAccountInfo?frameOrigin=https://brodriguez95.github.io"></iframe>
+		<iframe src="https://platform934.qa.dev-rb.com/WidgetApi/UserAccountInfo?frameOrigin=https://brodriguez95.github.io"></iframe>
 	</body>
 </html>
