@@ -1,1 +1,28 @@
 <iframe src="https://champion-demo.rallybound.org/sandy-stroll/Donate/plugin" width="320"></iframe>
+<style>
+  /* Allow the document to grow naturally */
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+  }
+
+  /* Prevent common wrapper elements from clamping height */
+  body > *,
+  #app,
+  #root,
+  .app,
+  .container,
+  .page {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Flexbox safety: avoid accidental internal scrolling */
+  body {
+    display: block !important;
+  }
+</style>
