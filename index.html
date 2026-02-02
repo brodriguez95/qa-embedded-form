@@ -1,28 +1,30 @@
-<iframe src="https://champion-demo.rallybound.org/sandy-stroll/Donate/plugin" width="320"></iframe>
 <style>
-  /* Allow the document to grow naturally */
-  html, body {
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0;
-    padding: 0;
-    overflow: visible !important;
+  .iframe-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  /* Prevent common wrapper elements from clamping height */
-  body > *,
-  #app,
-  #root,
-  .app,
-  .container,
-  .page {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
+  .iframe-wrapper iframe {
+    display: block;
+    width: 100%;
+    min-height: 650px;     /* fallback height */
+    border: 0;
+    overflow: hidden;
   }
 
-  /* Flexbox safety: avoid accidental internal scrolling */
-  body {
-    display: block !important;
+  /* Optional: taller on larger screens */
+  @media (min-width: 768px) {
+    .iframe-wrapper iframe {
+      min-height: 750px;
+    }
   }
 </style>
+
+<div class="iframe-wrapper">
+  <iframe
+    id="embedded-form"
+    src="https://champion-demo.rallybound.org/sandy-stroll/Donate/plugin"
+    scrolling="no"
+    loading="lazy">
+  </iframe>
+</div>
